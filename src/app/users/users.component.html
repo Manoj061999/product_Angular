@@ -1,0 +1,27 @@
+<body>
+    <h1>USER REGISTRATION :</h1>
+    <form [formGroup]="userdetails" (ngSubmit)="userFunction()">
+        <label>
+            <input type="text" placeholder="firstname" formControlName="firstname">
+        </label> <br>
+
+        <label>
+            <input type="text" placeholder="lastname" formControlName="lastname">
+        </label> <br>
+
+        <label>
+            <input type="email" placeholder="email" formControlName="email">
+        </label> <br>
+
+        <label>
+            <input type="password" placeholder="password" formControlName="password">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="phone number" formControlName="mobile">
+        </label> <br>
+
+        <button (click)="UserDataFun()" type="submit" value="button">CREATE USER</button>
+        <p><b>{{createuser}}</b></p>
+    </form>
+</body>

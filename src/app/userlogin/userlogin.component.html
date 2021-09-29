@@ -1,0 +1,15 @@
+<body>
+    <h1>USER LOGIN :</h1>
+    <form [formGroup]="logindetails" (ngSubmit)="loginFunction()">
+        <label>
+            <input type="email" placeholder="email ID" formControlName="email">
+        </label> <br>
+
+        <label>
+            <input type="password" placeholder="password" formControlName="password">
+        </label> <br>
+
+        <button (click)="LoginUserFun()" type="submit" value="button">LOGIN USER</button>
+        <p><b>{{user}}</b></p>
+    </form>
+</body>

@@ -1,0 +1,32 @@
+<body>
+     <!-- UPDATE ORDER : -->
+    <h1>UPDATE ORDER :</h1>
+    <form [formGroup]="updatedata" (ngSubmit)="updateOrderFunction()">
+        <label>
+            <input type="text" placeholder="orderId" formControlName="orderid">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="productquantity" formControlName="productquantity">
+        </label> <br>
+
+        <label>
+            <input type="text" placeholder="Address" formControlName="address">
+        </label> <br>
+
+        <button (click)="updateDataFun()" type="submit" value="button">UPDATE ORDER</button>
+        <p><b>{{updateorder}}</b></p>
+    </form>
+
+
+    <!-- CANCLE ORDER -->
+    <h1>CANCLE ORDER :</h1>
+    <form [formGroup]="CancleData" (ngSubmit)="cancleFunction()">
+        <label>
+            <input type="text" placeholder="OrderId" formControlName="orderid">
+        </label> <br>
+
+        <button (click)="CancleDataFun()" type="submit" value="button">CANCLE</button>
+        <p><b>{{canor}}</b></p>
+    </form>
+</body>

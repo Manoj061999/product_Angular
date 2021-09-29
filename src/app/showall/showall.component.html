@@ -1,0 +1,55 @@
+<body>
+    <h1>SHOW PLACED ORDERS :</h1>
+    <div *ngIf="correct">
+        <ol *ngFor="let items of showall">
+            <li><b>ORDER ID :</b>{{items.orderid}}</li>
+            <li><b>PRODUCT NAME :</b>{{items.productname}}</li>
+            <li><b>PRODUCT QUANTITY :</b>{{items.productquantity}}</li>
+            <li><b>PRODUCT PRICE :</b>{{items.productprice}}</li>
+            <li><b>ADDRESS :</b>{{items.address}}</li>
+            <li><b>PAYMENT METHOD :</b>{{items.paymentmethod}}</li>
+            <li><b>STATUS :</b>{{items.status}}</li>
+            <li><b>MOBILE :</b>{{items.mobile}}</li>
+            <li><b>EMAIL ID :</b>{{items.email}}</li>
+            <li><b>FIRST NAME :</b>{{items.firstname}}</li>
+            <li><b>LAST NAME :</b>{{items.lastname}}</li>
+            <li><b>ISACTIVE :</b>{{items.isActive}}</li>
+            <li><b>CREATED ON :</b>{{items.createdOn}}</li>
+        </ol>
+    </div>
+    <div *ngIf="wrong">
+        <p><b>{{showall}}</b></p>  
+    </div>
+
+    <!-- SHOW ORDERS BY COUNT  -->
+    <h1>SHOW ORDERS BY COUNTS :</h1>
+    <div *ngIf="a">
+        <ul *ngFor="let items of datebycount">
+            <li><b>COUNT :</b>{{items.count}}</li>
+            <li><b>DATE :</b>{{items._id.date}}</li>
+            <li><b>PRODUCT NAME :</b>{{items._id.productname}}</li>
+            <li><b>PRODUCT QUANTITY :</b>{{items._id.productquantity}}</li>
+            <li><b>PRODUCT PRICE :</b>{{items._id.productprice}}</li>
+            <li><b>TOTAL PRICE :</b>{{items._id.totalprice}}</li>
+        </ul>
+    </div>
+    <div *ngIf="b">
+        <p><b>{{datebycount}}</b></p>
+    </div>
+
+    <!-- SHOW PURCHASED ORDER -->
+    <h1>SHOW PURCHASED ORDERS COUNT :</h1>
+    <div *ngIf="x">
+        <ol *ngFor="let items of purchased">
+            <li><b>COUNT :</b>{{items.count}}</li>
+            <li><b>CUSTOMER NAME :</b>{{items._id.customername}}</li>
+            <li><b>PRODUCT NAME :</b>{{items._id.productname}}</li>
+            <li><b>PRODUCT QUANITY :</b>{{items._id.productquantity}}</li>
+            <li><b>PRODUCT PRICE :</b>{{items._id.productprice}}</li>
+            <li><b>TOTAL PRICE :</b>{{items._id.totalprice}}</li>
+        </ol>
+    </div>
+    <div *ngIf="y">
+        <p><b>{{purchased}}</b></p>
+    </div>
+</body>
