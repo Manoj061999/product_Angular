@@ -1,0 +1,76 @@
+<body>
+
+<!-- PLACED ITEMS COUNT -->
+
+    <h1><b>PLACED ITEMS COUNT :</b></h1>
+    <div *ngIf="a">
+        <ul *ngFor="let items of placedItems">
+            <li><b>COUNT NO :</b>{{items.count}}</li>
+            <li><b>ITEM NAME :</b>{{items._id.itemname}}</li>
+            <li><b>ITEM PRICE :</b>{{items._id.itemprice}}</li>
+            <li><b>ITEM QUANTITY :</b>{{items._id.itemquantity}}</li>
+            <li><b>TOTAL PRICE :</b>{{items._id.totalprice}}</li>
+            <li><b>******************************************</b></li>
+        </ul>
+    </div>
+    <div *ngIf="b">
+        <p><b>{{placedItems}}</b></p>
+    </div>
+
+    <!-- PURCHASED ITEMS COUNT  -->
+
+<h1><b>PURCHASED ITEMS COUNT :</b></h1>
+<div *ngIf="x">
+    <ul *ngFor="let items of purchasedItems">
+            <li><b>COUNT NO :</b>{{items.count}}</li>
+            <li><b>ITEM NAME :</b>{{items._id.itemname}}</li>
+            <li><b>ITEM PRICE :</b>{{items._id.itemprice}}</li>
+            <li><b>ITEM QUANTITY :</b>{{items._id.itemquantity}}</li>
+            <li><b>TOTAL PRICE :</b>{{items._id.totalprice}}</li>
+            <li><b>******************************************</b></li>
+    </ul>
+</div>
+<div *ngIf="y">
+<p><b>{{purchasedItems}}</b></p>
+</div>
+
+<!-- CANCLED ITEMS COUNT : -->
+
+<h1><b>CANCLED ITEMS COUNT :</b></h1>
+<div *ngIf="c">
+    <ul *ngFor="let items of cancledItems">
+        <li><b>COUNT NO :</b>{{items.count}}</li>
+        <li><b>ITEM NAME :</b>{{items._id.itemname}}</li>
+        <li><b>ITEM PRICE :</b>{{items._id.itemprice}}</li>
+        <li><b>ITEM QUANTITY :</b>{{items._id.itemquantity}}</li>
+        <li><b>TOTAL PRICE :</b>{{items._id.totalprice}}</li>
+        <li><b>******************************************</b></li>
+    </ul>
+</div>
+<div *ngIf="d">
+    <p><b>{{cancledItems}}</b></p>
+</div>
+
+<!-- VIEW ALL ITEMS -->
+<h1><b>VIEW ALL ITEMS :</b></h1>
+<div *ngIf="s">
+    <ul *ngFor="let items of viewItems">
+        <li><b>ITEM ID :</b>{{items.itemsid}}</li>
+        <li><b>ITEM NAME :</b>{{items.itemname}}</li>
+        <li><b>ITEM QUANTITY :</b>{{items.itemquantity}}</li>
+        <li><b>ITEM PRICE :</b>{{items.itemprice}}</li>
+        <li><b>TOTAL PRICE :</b>{{items.totalprice}}</li>
+        <li><b>STATUS :</b>{{items.status}}</li>
+        <li><b>ADDRESS :</b>{{items.address}}</li>
+        <li><b>MOBILE NUMBER :</b>{{items.mobile}}</li>
+        <li><b>EMAIL :</b>{{items.email}}</li>
+        <li><b>FIRST NAME :</b>{{items.firstname}}</li>
+        <li><b>LAST NAME :</b>{{items.lastname}}</li>
+        <li><b>ISACTIVE : </b>{{items.isActive}}</li>
+        <li><b>CREATEDON :</b>{{items.createdOn}}</li>
+    </ul>
+</div>
+<div *ngIf="f">
+    <p><b>{{viewItems}}</b></p>
+</div>
+</body>

@@ -52,4 +52,17 @@
     <div *ngIf="y">
         <p><b>{{purchased}}</b></p>
     </div>
+
+    <!-- SHOW EMPLOYEE  -->
+    <h1>SHOW ALL EMPLOYEE RECORDS :</h1>
+    <div>
+        <ul *ngFor="let items of Empdata">
+            <li><b>EMPLOYEE NAME:</b>{{items.employeename}}</li>
+            <li><b>EMPLOYEE ID :</b>{{items.employeeId}}</li>
+            <li><b>EMAIL ID :</b>{{items.email}}</li>
+            <li><b>MOBILE NUMBER :</b>{{items.mobile}}</li>
+            <li><b>IS ATCTIVE :</b>{{items.isActive}}</li>
+            <li><b>CREATED ON :</b>{{items.createdOn}}</li>
+        </ul>
+    </div>
 </body>

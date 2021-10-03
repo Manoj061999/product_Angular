@@ -13,6 +13,8 @@ export class ShowallComponent implements OnInit {
   count: any;
   datebycount: any;
   purchased: any;
+  emp: any;
+  Empdata: any;
 
   constructor(private route : ActivatedRoute, private router : Router, private data:DataService) { }
 
@@ -20,6 +22,8 @@ export class ShowallComponent implements OnInit {
     this.fetchOrder()
     this.fetchorderbydate()
     this.fetchorderpurchased()
+    //EMPLOYEE
+    this.fetchEmployee()
   }
 
   correct = false;
@@ -80,6 +84,14 @@ export class ShowallComponent implements OnInit {
         this.x = true;
         this.y = false;
       }
+    })
+  }
+
+  fetchEmployee(){
+    return this.data.getEmployee().subscribe((items:any)=> {
+      console.log(items);
+      this.emp = items;
+      this.Empdata = this.emp.message;
     })
   }
 

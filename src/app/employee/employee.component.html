@@ -1,0 +1,43 @@
+<body>
+    <h1>EMPLOYEE DATA :</h1>
+    <form [formGroup]="employeedetails" (ngSubmit)="EmployeeFunction()">
+        <label>
+            <input type="text" placeholder="Employee Name" formControlName="employeename">
+        </label> <br>
+
+        <label>
+            <input type="text" placeholder="Employee ID" formControlName="employeeId">
+        </label> <br>
+
+        <label>
+            <input type="email" placeholder="Email ID" formControlName="email">
+        </label> <br>
+
+        <label>
+            <input type="password" placeholder="Password" formControlName="password">
+        </label> <br>
+
+        <label>
+            <input type="number" placeholder="Phone Number" formControlName="mobile">
+        </label> <br>
+
+       <button (click)="EmployeeDetailsFun()" type="submit" value="button">CREATE EMPLOYEE</button>
+       <p><b>{{employeData}}</b></p>
+    </form>
+
+    <!-- LOGIN EMPLOYEE -->
+
+    <h1>LOGIN EMPLOYEE :</h1>
+    <form [formGroup]="Logindetails" (ngSubmit)="LoginFunction()">
+        <label>
+            <input type="email" placeholder="Email ID" formControlName="email">
+        </label> <br>
+
+        <label>
+            <input type="password" placeholder="Password" formControlName="password">
+        </label> <br>
+
+        <button (click)="LoginEmployeeFun()" type="submit" value="button">LOGIN EMPLOYEE</button>
+        <p><b>{{loginemp}}</b></p>
+    </form>
+</body>

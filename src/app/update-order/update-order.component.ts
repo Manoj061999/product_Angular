@@ -9,6 +9,8 @@ import { DataService } from '../data.service';
   styleUrls: ['./update-order.component.css']
 })
 export class UpdateOrderComponent implements OnInit {
+
+  //update
   updatedata = new FormGroup({
     orderid : new FormControl(''),
     productquantity : new FormControl(''),
@@ -17,11 +19,19 @@ export class UpdateOrderComponent implements OnInit {
   update: any;
   updateorder: any;
 
+  //cancle
   CancleData = new FormGroup({
     orderid : new FormControl('')
   })
   cancle: any;
   canor: any;
+
+  //find
+  finddetails = new FormGroup({
+    email : new FormControl('')
+  })
+  find: any;
+  FindEmail: any;
   constructor(private route : ActivatedRoute , private router : Router , private data : DataService) { }
 
   ngOnInit() {
@@ -33,6 +43,10 @@ export class UpdateOrderComponent implements OnInit {
   cancleFunction(){
     console.log(this.CancleData.value);
   }
+  FindFunction(){
+    console.log(this.finddetails.value);
+  }
+
 
 
 
@@ -49,6 +63,26 @@ CancleDataFun(){
     console.log(data);
     this.cancle = data;
     this.canor = this.cancle.message;
+  })
+}
+
+e=false;
+f=false;
+
+findorderFun(){
+  this.data.findOrder(this.finddetails).subscribe((data: {})=> {
+    console.log(data);
+    this.find = data;
+    this.FindEmail = this.find.message;
+
+    //condition
+    if(this.FindEmail=="no records found"){
+      this.e=false;
+      this.f=true;
+    }else{
+      this.e=true;
+      this.f=false;
+    }
   })
 }
 }

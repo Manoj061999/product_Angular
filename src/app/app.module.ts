@@ -12,6 +12,9 @@ import { UpdateOrderComponent } from './update-order/update-order.component';
 import { ShowallComponent } from './showall/showall.component';
 import { UsersComponent } from './users/users.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { CreateItemsComponent } from './create-items/create-items.component';
+import { ShowAllItemsComponent } from './show-all-items/show-all-items.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 
 
@@ -23,7 +26,10 @@ import { UserloginComponent } from './userlogin/userlogin.component';
     UpdateOrderComponent,
     ShowallComponent,
     UsersComponent,
-    UserloginComponent
+    UserloginComponent,
+    CreateItemsComponent,
+    ShowAllItemsComponent,
+    EmployeeComponent
   ],
   imports: [
     BrowserModule,

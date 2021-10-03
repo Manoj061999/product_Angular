@@ -6,14 +6,20 @@ import { UpdateOrderComponent } from './update-order/update-order.component';
 import { ShowallComponent } from './showall/showall.component';
 import { UsersComponent } from './users/users.component';
 import { UserloginComponent } from './userlogin/userlogin.component';
+import { CreateItemsComponent } from './create-items/create-items.component';
+import { ShowAllItemsComponent } from './show-all-items/show-all-items.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 const routes: Routes = [
 
   {path:'order',component:CreateOrderComponent},
   {path:'updateorder',component:UpdateOrderComponent},
-  {path:'',component:ShowallComponent},
+  {path:'showallorders',component:ShowallComponent},
   {path:'user',component:UsersComponent},
-  {path:'userlogin',component:UserloginComponent}
+  {path:'userlogin',component:UserloginComponent},
+  {path:'items',component:CreateItemsComponent},
+  {path:'showallitems',component:ShowAllItemsComponent},
+  {path:'',component:EmployeeComponent}
 ];
 
 @NgModule({

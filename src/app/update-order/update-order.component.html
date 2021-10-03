@@ -29,4 +29,34 @@
         <button (click)="CancleDataFun()" type="submit" value="button">CANCLE</button>
         <p><b>{{canor}}</b></p>
     </form>
+
+    <!-- FIND ORDERS -->
+    <h1>FIND YOUR ORDER :</h1>
+    <form [formGroup]="finddetails" (ngSubmit)="FindFunction()">
+        <label>
+            <input type="email" placeholder="email ID" formControlName="email">
+        </label> <br>
+
+        <button (click)="findorderFun()" type="submit" value="button">FIND ORDER</button>
+        <div *ngIf="e">
+            <ul *ngFor="let data of FindEmail">
+            <li><b>ORDER ID :</b>{{data.orderid}}</li>
+            <li><b>PRODUCT NAME :</b>{{data.productname}}</li>
+            <li><b>PRODUCT QUANTITY :</b>{{data.productquantity}}</li>
+            <li><b>PRODUCT PRICE :</b>{{data.productprice}}</li>
+            <li><b>ADDRESS :</b>{{data.address}}</li>
+            <li><b>PAYMENT METHOD :</b>{{data.paymentmethod}}</li>
+            <li><b>STATUS :</b>{{data.status}}</li>
+            <li><b>MOBILE :</b>{{data.mobile}}</li>
+            <li><b>EMAIL ID :</b>{{data.email}}</li>
+            <li><b>FIRST NAME :</b>{{data.firstname}}</li>
+            <li><b>LAST NAME :</b>{{data.lastname}}</li>
+            <li><b>ISACTIVE :</b>{{data.isActive}}</li>
+            <li><b>CREATED ON :</b>{{data.createdOn}}</li>
+            </ul>
+        </div>
+        <div *ngIf="f">
+            <p><b>{{FindEmail}}</b></p>
+        </div>
+    </form>
 </body>
